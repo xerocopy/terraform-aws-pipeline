@@ -13,7 +13,16 @@ export AWS_DEFAULT_REGION="us-west-2"
 ```
 ssh-keygen -t rsa
 ```
-* Initialize terraform workspace
+* Initialize terraform workspace in create_state_bucket
+```
+terraform init
+```
+* Set up backend bucket in s3  
+```
+terraform apply
+```
+
+* Initialize terraform workspace in create_pipeline
 ```
 terraform init
 ```
@@ -21,6 +30,7 @@ terraform init
 ```
 terraform apply
 ```
+
 
 ## Get ECS Image AMI for your region
 ```bash
@@ -44,10 +54,3 @@ git push origin master
 ## Youtube Video demonstration
 [Youtube link](https://youtu.be/nm16l3YN6ps)
 
-## Workspaces
-```
-terraform workspace list
-```
-```
-terraform workspace create
-```
