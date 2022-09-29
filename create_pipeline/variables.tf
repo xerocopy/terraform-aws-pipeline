@@ -25,7 +25,7 @@ variable "python_project_repository_branch" {
 
 variable "artifacts_bucket_name" {
   description = "S3 Bucket for storing artifacts"
-  default     = "emeka18-cicd-artifacts-bucket"
+  default     = "emeka18-cicd-artifacts-bucket-123"
 }
 
 variable "container_port" {
@@ -34,11 +34,14 @@ variable "container_port" {
 }
 
 variable "ACCOUNT_ID" {
-
+  description = "aws account id number"
+  default     = "516003265142"
 }
 
+
 variable "vpc_default_id" {
-  default = "vpc-d3dcdcab"
+  #default = "vpc-d3dcdcab"
+  default = "vpc-5f353f27"
 }
 
 variable "container_name" {

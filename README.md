@@ -6,8 +6,9 @@ This creates a aws code pipeline using terraform that is deployed in ECS
 ```
 export AWS_ACCESS_KEY_ID="AXXXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXXXXXXXXXXXXX"
-export AWS_DEFAULT_REGION="eu-west-1"
+export AWS_DEFAULT_REGION="us-west-2"
 ```
+
 * create ssh keys for login
 ```
 ssh-keygen -t rsa

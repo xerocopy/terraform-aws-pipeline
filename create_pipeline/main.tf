@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 0.12"
   # Uncomment only if you would like not to use s3 as backend
   backend "s3" {
-    bucket = "my-tf-state-bucket-emeka"
+    bucket = "my-tf-state-bucket-emeka-123"
     key    = "terraform.tfstate"
     region = "us-west-2"
   }

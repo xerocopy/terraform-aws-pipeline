@@ -50,10 +50,16 @@ resource "aws_codepipeline" "python_app_pipeline" {
               value = var.aws_region
             },
             {
-              name  = "AWS_ACCOUNT_ID"
-              type  = "PARAMETER_STORE"
-              value = "ACCOUNT_ID"
+            name  = "AWS_ACCOUNT_ID"
+            type  = "PLAINTEXT"
+            value = var.ACCOUNT_ID
             },
+            # best practise to use parameter store
+            # {
+            #   name  = "AWS_ACCOUNT_ID"
+            #   type  = "PARAMETER_STORE"
+            #   value = "ACCOUNT_ID"
+            # },
             {
               name  = "IMAGE_REPO_NAME"
               type  = "PLAINTEXT"

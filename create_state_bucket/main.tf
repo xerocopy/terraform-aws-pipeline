@@ -8,7 +8,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket        = "my-tf-state-bucket-emeka"
+  bucket        = "my-tf-state-bucket-emeka-123"
   acl           = "private"
   force_destroy = true
 
