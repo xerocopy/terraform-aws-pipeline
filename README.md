@@ -1,3 +1,5 @@
+Create AWS hosted website using terraform and ECS
+
 
 ### local environment
 
@@ -13,6 +15,8 @@ export AWS_ACCESS_KEY_ID="AXXXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXXXXXXXXXXXXX"
 export AWS_DEFAULT_REGION="us-west-2"
 ```
+
+* replace export with set in non unix shells environment (VS code)
 
 * create ssh keys for login
 ```
