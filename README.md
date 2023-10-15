@@ -1,3 +1,8 @@
+
+### local environment
+
+
+
 # terraform_aws_pipeline
 This creates a aws code pipeline using terraform that is deployed in ECS
 
@@ -13,6 +18,7 @@ export AWS_DEFAULT_REGION="us-west-2"
 ```
 ssh-keygen -t rsa
 ```
+
 * Initialize terraform workspace in create_state_bucket
 ```
 terraform init
