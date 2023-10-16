@@ -1,5 +1,5 @@
 
-test deployment in cloud 9
+test github push in cloud 9
 
 
 # terraform_aws_pipeline
@@ -57,6 +57,16 @@ git status
 
 git add -A
 
+git commit -m "update"
+
+git config --gloabl user.name "xxxxx"
+
+git config --gloabl user.email "xxxxx"
+
+git push origin 2minerstechno_website_hosting
+
+
+password (personal access key)
 
 
 https://www.youtube.com/watch?v=ua6JvujMLY8
