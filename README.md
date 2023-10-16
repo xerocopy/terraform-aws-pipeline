@@ -1,24 +1,24 @@
-Create AWS hosted website using terraform and ECS
-
-
-### local environment
-
 
 
 # terraform_aws_pipeline
-This creates a aws code pipeline using terraform that is deployed in ECS
 
-## To run
-* first export aws credentials to environment variables
+Description: This creates a aws code pipeline using terraform that is deployed in ECS. 
+
+
+
+## To spin up the infrastructure
+
+* create a local development environment (cloud9), when using systems other than unix WSL will be needed for terraform. 
+
+
+* first export aws credentials to environment variables (every login)
 ```
 export AWS_ACCESS_KEY_ID="AXXXXXXX"
 export AWS_SECRET_ACCESS_KEY="XXXXXXXXXXXXXXXXXXXXXXX"
-export AWS_DEFAULT_REGION="us-west-2"
+export AWS_DEFAULT_REGION="ap-southeast-2"
 ```
 
-* replace export with set in non unix shells environment (VS code)
-
-* create ssh keys for login
+* create ssh keys for login (in to the repository), pull the resository to local
 ```
 ssh-keygen -t rsa
 ```
@@ -36,10 +36,24 @@ terraform apply
 ```
 terraform init
 ```
-* deploy pipline
+* Deploy pipline
 ```
 terraform apply
 ```
+
+* In case getting an InvalidClientTokenId Error, set up private subnet to allow cloud9 to interact with other AWS services
+```
+https://docs.aws.amazon.com/cloud9/latest/user-guide/security-iam.html#auth-and-access-control-temporary-managed-credentials
+```
+
+
+* After you finish, switch off the infrustructuer to reduce the AWS cost
+```
+terraform destroy
+```
+
+
+
 
 
 ## Get ECS Image AMI for your region
@@ -61,6 +75,21 @@ git add .
 git commit -m "Initial Commit"
 git push origin master
 ```
+
+
+
+
+## To access the demo website from local machine
+``` follow the terraform outputs from the create_pipeline folder
+code_commit_repo = "https://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/MyPythonApp"
+elb = "test-lb-tf-1059347699.ap-southeast-2.elb.amazonaws.com"
+```
+
+
+
+
+
+
 ## Youtube Video demonstration
 [Youtube link](https://youtu.be/nm16l3YN6ps)
 
