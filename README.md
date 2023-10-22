@@ -1,4 +1,6 @@
 
+test github push in cloud 9
+
 
 # terraform_aws_pipeline
 
@@ -44,6 +46,32 @@ terraform apply
 * In case getting an InvalidClientTokenId Error, set up private subnet to allow cloud9 to interact with other AWS services
 ```
 https://docs.aws.amazon.com/cloud9/latest/user-guide/security-iam.html#auth-and-access-control-temporary-managed-credentials
+
+push repository to github
+
+generate personal access token 
+
+cd ./terraform-aws-pipeline-staff-website
+
+git status
+
+git add -A
+
+git commit -m "update"
+
+git config --gloabl user.name "xxxxx"
+
+git config --gloabl user.email "xxxxx"
+
+git push origin 2minerstechno_website_hosting
+
+
+password (personal access key)
+
+
+https://www.youtube.com/watch?v=ua6JvujMLY8
+
+
 ```
 
 
