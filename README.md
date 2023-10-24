@@ -67,7 +67,7 @@ git push origin 2minerstechno_website_hosting
 
 enter user name: (user name)
 
-enter user password: (personal access key)
+enter user password: (personal access key) (settings -> developer settings -> personal access token)
 
 
 
@@ -116,6 +116,12 @@ elb = "test-lb-tf-1059347699.ap-southeast-2.elb.amazonaws.com"
 ```
 
 
+
+### The terraform_aws_pipeline repo is pushed to github
+
+### The showcase_flask_app repo is connected to the aws code_commit_repo
+
+to save the latest app changes, pull the repo from aws code_commit_repo (in showcase_flask_app dir), and navigate to main dir, push repo to github.
 
 
 
