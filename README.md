@@ -65,8 +65,10 @@ git config --gloabl user.email "xxxxx"
 
 git push origin 2minerstechno_website_hosting
 
+enter user name: (user name)
 
-password (personal access key)
+enter user password: (personal access key)
+
 
 
 https://www.youtube.com/watch?v=ua6JvujMLY8
@@ -79,8 +81,8 @@ https://www.youtube.com/watch?v=ua6JvujMLY8
 ```
 terraform destroy
 ```
-
-
+* After website deployed in ECS, push the app code folder to code commit repo via git pull, git add -A, git commit -m "xx" and git push HTTPS
+``` 
 
 
 

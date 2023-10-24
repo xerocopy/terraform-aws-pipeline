@@ -66,7 +66,7 @@ resource "aws_ecs_task_definition" "python_task" {
 
   placement_constraints {
     type       = "memberOf"
-    expression = "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]"
+    expression = "attribute:ecs.availability-zone in [ap-southeast-2a, ap-southeast-2b]"
   }
 }
 

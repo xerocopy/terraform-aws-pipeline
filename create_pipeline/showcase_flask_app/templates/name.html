@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Team Tardis | {{ name }}'s page{% endblock %}
+{% block title %}Two Miners Technology Co. | {{ name }}'s page{% endblock %}
     {% block content %}
     <p style="text-align:center;"> This is {{ name }}'s page. </p>
     {% if name == 'Emeka' %}
@@ -22,6 +22,10 @@
     <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='will.jpeg') }}" alt="will" style="width:30%">
     <p style="text-align:center;"> Will graduated with a degree in Marine Zoology and spent a year in the maritime industry as a deckhand. During the COVID-19 pandemic, he taught himself to code and is looking forward to getting started at Sky.</p>
     <p style="text-align:center;"> He is an avid classical guitarist and would love to perform any song requests you have!</p>
+    
+    {% elif name == 'Background' %}
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='background.jpeg') }}" alt="Background" style="width:100%">
+    <p style="text-align:center;"> This is a background page. It will take you to nowhere!</p>
     {% else %}
 
     {% endif %}
