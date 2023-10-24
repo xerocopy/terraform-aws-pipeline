@@ -9,7 +9,7 @@
         softwarization, Data science and IoT.</p>
 
     {% elif name == 'Callum' %}
-    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='callum.png') }}" alt="callum" style="width:30%">
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='callum.jpeg') }}" alt="callum" style="width:30%">
     <p style="text-align:center;">Callum graduated with a masters in Physics from the University of Cambridge. He enjoys choral singing and playing the violin.</p>
     <p style="text-align:center;">His first experience of Software Engineering was during his degree where he wrote a computer simulation to investigate biological viral coinfection. He was even able to use a supercomputer!</p>
 
@@ -18,14 +18,46 @@
     <p style="text-align:center;">Kevin recently graduated with masters in Electronic Engineering from the University of Surrey.</p>
     <p style="text-align:center;">He has also competed semi-professionally as a boxer and is a big fan of Dr Who. </p>
 
+    {% elif name == 'aboutus' %}
+    <table class="table">
+    <tr style="width:100%;">
+        <th style="text-align:center; width:25%;">Emeka</th>
+        <th style="text-align:center; width:25%;">Callum</th>
+        <th style="text-align:center; width:25%;">Will</th>
+        <th style="text-align:center; width:25%;">Kevin</th>
+      </tr>
+      <tr>
+    <a href="{{ url_for('member', name='Emeka') }}"><img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:25%"></a>
+    <a href="{{ url_for('member', name='Callum') }}"><img src="{{ url_for('static', filename='callum.jpeg') }}"  alt="callum" style="width:25%"></a>
+    <a href="{{ url_for('member', name='Will') }}"><img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:25%"></a>
+    <a href="{{ url_for('member', name='Kevin') }}"><img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:25%"></a>
+    </tr>
+    </table>
+    
     {% elif name == 'Will' %}
-    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='will.jpeg') }}" alt="will" style="width:30%">
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='will.jpeg') }}" alt="kevin" style="width:30%">
     <p style="text-align:center;"> Will graduated with a degree in Marine Zoology and spent a year in the maritime industry as a deckhand. During the COVID-19 pandemic, he taught himself to code and is looking forward to getting started at Sky.</p>
     <p style="text-align:center;"> He is an avid classical guitarist and would love to perform any song requests you have!</p>
     
     {% elif name == 'Background' %}
     <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='background.jpeg') }}" alt="Background" style="width:100%">
     <p style="text-align:center;"> This is a background page. It will take you to nowhere!</p>
+    
+    {% elif name == 'home' %}
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='home.png') }}" alt="kevin" style="width:30%">
+    <p style="text-align:center;"> This is Home page</p>
+    
+    
+    {% elif name == 'projects' %}
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='projects.png') }}" alt="kevin" style="width:30%">
+    <p style="text-align:center;"> This is Projects page</p>
+    
+    {% elif name == 'contactus' %}
+    <img class="rounded mx-auto d-block" src="{{ url_for('static', filename='contactus.png') }}" alt="kevin" style="width:30%">
+    <p style="text-align:center;"> This is Contactus page</p>
+    
+    
+    
     {% else %}
 
     {% endif %}

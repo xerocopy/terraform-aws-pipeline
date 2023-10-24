@@ -20,4 +20,4 @@ def test_add_success(client):
     assert result.status_code == 200
 
 def test_four_in_team():
-    assert len(members) == 5
+    assert len(members) == 9

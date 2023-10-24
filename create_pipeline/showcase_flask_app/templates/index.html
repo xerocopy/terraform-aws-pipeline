@@ -1,66 +1,9 @@
-<<<<<<< HEAD
-{% extends "base.html" %}
-{% block title %}Team Tardis{% endblock %}
-{% block content %}
-
-
-<head>
-  <title>Your Static Website</title>
-</head>
-<body>
-  <header>
-      <h1>Welcome to Our Website</h1>
-      <nav>
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Porojects</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-          </ul>
-      </nav>
-  </header>
-
-  <!-- Content of your website goes here -->
-
-  <table class="table">
-      <tr style="width:100%;">
-          <th style="text-align:center; width:25%;">Emeka</th>
-          <th style="text-align:center; width:25%;">Callum</th>
-          <th style="text-align:center; width:25%;">Will</th>
-          <th style="text-align:center; width:25%;">Kevin</th>
-        </tr>
-        <tr>
-  <a href="{{ url_for('member', name='Emeka') }}"><img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:25%"></a>
-  <a href="{{ url_for('member', name='Callum') }}"><img src="{{ url_for('static', filename='callum.png') }}"  alt="callum" style="width:25%"></a>
-  <a href="{{ url_for('member', name='Will') }}"><img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:25%"></a>
-  <a href="{{ url_for('member', name='Kevin') }}"><img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:25%"></a>
-  </tr>
-  </table>
-
-
-  <footer>
-    <p>Follow us on social media:</p>
-    <ul>
-        <li><a href="https://www.youtube.com/your-channel" target="_blank">YouTube</a></li>
-        <li><a href="https://www.ebay.com/your-store" target="_blank">eBay</a></li>
-        <li><a href="https://www.facebook.com/your-page" target="_blank">Facebook</a></li>
-    </ul>
-  </footer>
-</body>
-
-
-
-
-
-<p style="text-align:center;">Click on our images to find out more about us!</p>
-{% endblock %}
-=======
 {% extends "base.html" %}
 {% block title %}Two Miners Technology Co.{% endblock %}
 {% block content %}
 <table class="table">
     <tr style="width:100%;">
-        <th style="text-align:center; width:100%;"></th>
+        <th style="text-align:center; width:100%;">Two Miners Technology Co.</th>
       </tr>
       <tr>
 <a href="{{ url_for('member', name='Background') }}"><img src="{{ url_for('static', filename='background.jpeg') }}" alt="background" style="width:100%"></a>
@@ -74,34 +17,19 @@
         <th style="text-align:center; width:25%;">Contact Us</th>
       </tr>
       <tr>
-<a href="{{ url_for('member', name='Emeka') }}"><img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:25%"></a>
-<a href="{{ url_for('member', name='Callum') }}"><img src="{{ url_for('static', filename='callum.png') }}"  alt="callum" style="width:25%"></a>
-<a href="{{ url_for('member', name='Will') }}"><img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:25%"></a>
-<a href="{{ url_for('member', name='Kevin') }}"><img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:25%"></a>
-</tr>
-</table>
-<table class="table">
-    <tr style="width:100%;">
-        <th style="text-align:center; width:25%;">Home</th>
-        <th style="text-align:center; width:25%;">Projects</th>
-        <th style="text-align:center; width:25%;">About Us</th>
-        <th style="text-align:center; width:25%;">Contact Us</th>
-      </tr>
-      <tr>
-<a href="{{ url_for('member', name='Emeka') }}"><img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:25%"></a>
-<a href="{{ url_for('member', name='Callum') }}"><img src="{{ url_for('static', filename='callum.png') }}"  alt="callum" style="width:25%"></a>
-<a href="{{ url_for('member', name='Will') }}"><img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:25%"></a>
-<a href="{{ url_for('member', name='Kevin') }}"><img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:25%"></a>
+<a href="{{ url_for('member', name='home') }}"><img src="{{ url_for('static', filename='home.png') }}" alt="emeka" style="width:25%"></a>
+<a href="{{ url_for('member', name='projects') }}"><img src="{{ url_for('static', filename='projects.png') }}"  alt="callum" style="width:25%"></a>
+<a href="{{ url_for('member', name='aboutus') }}"><img src="{{url_for('static', filename='aboutus.png')}}" alt="will" style="width:25%"></a>
+<a href="{{ url_for('member', name='contactus') }}"><img src="{{url_for('static', filename='contactus.png')}}" alt="kevin" style="width:25%"></a>
 </tr>
 </table>
 <footer>
     <div class="social-media-links">
-        <a href="https://www.youtube.com/user/YourYouTubeChannel" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
-        <a href="https://www.ebay.com/usr/YourEbayUsername" target="_blank"><img src="ebay-icon.png" alt="eBay"></a>
-        <a href="https://www.facebook.com/YourFacebookPage" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-        <a href="https://www.linkedin.com/in/YourLinkedInProfile" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/user/YourYouTubeChannel" target="_blank"><img src="{{ url_for('static', filename='youtube-icon.png') }}" alt="YouTube" style="height:25px"></a>
+        <a href="https://www.ebay.com/usr/YourEbayUsername" target="_blank"><img src="{{ url_for('static', filename='ebay-icon.png') }}" alt="eBay" style="height:50px"></a>
+        <a href="https://www.facebook.com/YourFacebookPage" target="_blank"><img src="{{ url_for('static', filename='facebook-icon.png') }}" alt="Facebook" style="height:25px"></a>
+        <a href="https://www.linkedin.com/in/YourLinkedInProfile" target="_blank"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn" style="height:25px"></a>
     </div>
 </footer>
 <p style="text-align:center;">Click on our images to find out more about us!</p>
 {% endblock %}
->>>>>>> 5bdcf5b (update latest running web app to github)
