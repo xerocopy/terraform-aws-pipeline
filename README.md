@@ -82,8 +82,6 @@ terraform destroy
 
 
 
-
-
 ## Get ECS Image AMI for your region
 ```bash
 aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended
@@ -105,8 +103,6 @@ git push origin master
 ```
 
 
-
-
 ## To access the demo website from local machine
 ``` follow the terraform outputs from the create_pipeline folder
 code_commit_repo = "https://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/MyPythonApp"
@@ -114,6 +110,9 @@ elb = "test-lb-tf-1059347699.ap-southeast-2.elb.amazonaws.com"
 ```
 
 
+## Acctual Run cost:
+
+~ AUD 123.37 per month (ec2 t2.medium + elb + cloudwatch) Dec2023
 
 
 
