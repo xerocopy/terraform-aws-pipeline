@@ -43,44 +43,12 @@ terraform init
 terraform apply
 ```
 
-* In case getting an InvalidClientTokenId Error, set up private subnet to allow cloud9 to interact with other AWS services
-```
-https://docs.aws.amazon.com/cloud9/latest/user-guide/security-iam.html#auth-and-access-control-temporary-managed-credentials
-
-push repository to github
-
-generate personal access token 
-
-cd ./terraform-aws-pipeline-staff-website
-
-git status
-
-git add -A
-
-git commit -m "update"
-
-git config --gloabl user.name "xxxxx"
-
-git config --gloabl user.email "xxxxx"
-
-git push origin 2minerstechno_website_hosting
-
-
-password (personal access key)
-
-
-https://www.youtube.com/watch?v=ua6JvujMLY8
-
-
-```
-
-
 * After you finish, switch off the infrustructuer to reduce the AWS cost
 ```
 terraform destroy
 ```
-
-
+* After website deployed in ECS, push the app code folder to code commit repo via git pull, git add -A, git commit -m "xx" and git push HTTPS
+``` 
 
 ## Get ECS Image AMI for your region
 ```bash
@@ -113,6 +81,43 @@ elb = "test-lb-tf-1059347699.ap-southeast-2.elb.amazonaws.com"
 ## Acctual Run cost:
 
 ~ AUD 123.37 per month (ec2 t2.medium + elb + cloudwatch) Dec2023
+
+### The terraform_aws_pipeline repo is pushed to github
+
+### The showcase_flask_app repo is connected to the aws code_commit_repo
+
+to save the latest app changes, pull the repo from aws code_commit_repo (in showcase_flask_app dir), and navigate to main dir, push repo to github.
+
+```
+
+to push repository to github:
+
+generate personal access token (github)
+
+cd ./terraform-aws-pipeline-staff-website
+
+git status
+
+git add -A
+
+git commit -m "update"
+
+git config --gloabl user.name "xxxxx"
+
+git config --gloabl user.email "xxxxx"
+
+git push origin 2minerstechno_website_hosting
+
+enter user name: (user name)
+
+enter user password: (personal access key) (settings -> developer settings -> personal access token)
+
+
+
+https://www.youtube.com/watch?v=ua6JvujMLY8
+
+
+```
 
 
 
